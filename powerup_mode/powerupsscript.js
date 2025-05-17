@@ -1,5 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const socket = io("/powerup");
+    // const socket = io("/powerup");
+    const socket = io("https://tictactoe-group8.onrender.com/powerup", {
+  transports: ["websocket"]
+});
 
     let userName;
     let opponentName = "";

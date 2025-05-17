@@ -2,7 +2,11 @@
 // If both players have the same name the game won't work needs fixing
 // X and O are semi transparent
 window.addEventListener('DOMContentLoaded', () => {
-    const socket = io("/classic");
+    // const socket = io("/classic");
+    const socket = io("https://tictactoe-group8.onrender.com/classic", {
+  transports: ["websocket"]
+});
+
 
     let userName;
 
