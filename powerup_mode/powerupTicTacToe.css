@@ -1,0 +1,220 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Tilt Warp', cursive;
+    background: linear-gradient(to bottom right, #d0f0fd, #f0faff);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+
+    background-image: url('/images/green_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: #2196f3;
+    text-shadow: 3px 3px #b3e5fc;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  #enterName {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #64b5f6;
+    outline: none;
+    background: #ffffff;
+    box-shadow: 2px 2px 6px #bbdefb;
+    margin-bottom: 1rem;
+  }
+  
+  #find {
+    background: #42a5f5;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0.8rem;
+    box-shadow: 3px 3px 7px #90caf9;
+    transition: 0.3s ease;
+  }
+  
+  #find:hover {
+    background: #1e88e5;
+  }
+
+  #playBot {
+    background: #42a5f5;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0.8rem;
+    box-shadow: 3px 3px 7px #90caf9;
+    transition: 0.3s ease;
+  }
+  
+  #playBot:hover {
+    background: #1e88e5;
+  }
+  
+  #loading {
+    width: 80px;
+    margin: 1rem;
+  }
+  
+  #cont {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .btn {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    background-color: #e3f2fd;
+    border: 3px solid #90caf9;
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .btn i {
+    font-size: 2rem;
+  }
+
+  .btn:hover:not(:disabled) {
+    background-color: #bbdefb;
+    transform: scale(1.05);
+  }
+  
+  .btn:disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+
+  /* Power-up Buttons Container */
+#powerUps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1.5rem; /* Increased gap for more space between buttons */
+  }
+  
+  /* Power-up Buttons Styling */
+  #powerUps button {
+    background: linear-gradient(145deg, #6ec1e4, #4a98c7); /* Gradient background */
+    border: 2px solid #3882bb; /* Border color */
+    border-radius: 12px; /* Rounded corners */
+    padding: 0.6rem 1.5rem; /* Adjust padding for better button size */
+    font-size: 1rem; /* Smaller font size */
+    color: white; /* Text color */
+    font-family: 'Tilt Warp', cursive; /* Font family */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition for hover effect */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 150px; /* Set a minimum width to ensure buttons are the same size */
+    height: 40px; /* Slightly reduced height for better fit */
+  }
+  
+  #powerUps button i {
+    margin-right: 8px; /* Add space between icon and text */
+  }
+  
+  /* Hover effect for buttons */
+  #powerUps button:hover {
+    background: linear-gradient(145deg, #4a98c7, #6ec1e4); /* Reverse the gradient */
+    transform: translateY(-4px); /* Lift the button */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  
+  /* Disabled button styling */
+  #powerUps button:disabled {
+    background: #b0bec5; /* Gray background when disabled */
+    color: #757575; /* Lighter text color */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    box-shadow: none; /* Remove shadow */
+  }
+  
+  /* Active button state */
+  #powerUps button:active {
+    transform: translateY(2px); /* Slightly depress the button */
+  }
+  
+  /* Remove outline when the button is focused */
+  #powerUps button:focus {
+    outline: none;
+  }
+  
+  
+  #bigContainer {
+    margin-top: 1rem;
+  }
+  
+  #whosTurn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d47a1;
+    margin-top: 1rem;
+    text-shadow: 1px 1px #bbdefb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+    }
+  
+    input[type="text"], #find {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    #cont {
+      grid-template-columns: repeat(3, 60px);
+      grid-gap: 8px;
+    }
+  
+    .btn {
+      width: 60px;
+      height: 60px;
+      font-size: 2rem;
+    }
+  }
+  

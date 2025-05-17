@@ -1,0 +1,129 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tilt Warp', cursive;
+    background: linear-gradient(to bottom right, #d0f0fd, #f0faff);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+
+    /* Byt ut temp_background till den riktiga bilden */
+    background-image: url('images/blue_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+
+}
+
+h1 {
+    font-size: 120px;
+    font-weight: bold;
+    font-family: 'Vina Sans', sans-serif;
+    background: linear-gradient(to bottom, #B8E7FF, #7DD2FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px #2492E5;
+}
+  
+
+/* Game Mode Menu */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#menu p {
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Buttons for Game Modes */
+.modeBtn {
+    font-family: 'Vina Sans', sans-serif;
+    background: white;
+    border: none;
+    padding: 1rem 2rem;
+    width: 240px;
+    font-size: 1.5rem;
+    color: #2196f3;
+    border-radius: 12px;
+    margin: 0.8rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 7px #90caf9;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.modeBtn:hover {
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+#classicMode:hover {
+    background: #400CB9;
+
+}
+
+#blitzMode:hover {
+    background: #DB3737;
+
+}
+
+#powerUpMode:hover {
+    background: #00A233;
+
+}
+
+/* Active/Focus Effect */
+.modeBtn:active {
+    background: #1565c0;
+    transform: scale(1.05);
+}
+
+.modeBtn:focus {
+    outline: none;
+    border: 2px solid #90caf9;
+}
+
+/* Loading Spinner */
+#loading {
+    width: 80px;
+    margin: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #menu p {
+        font-size: 1.3rem;
+    }
+
+    .modeBtn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        margin: 0.6rem;
+    }
+}

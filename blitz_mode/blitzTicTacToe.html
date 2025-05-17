@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlitzTicTacToe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/blitz_mode/blitzTicTacToe.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <h1>Welcome to BlitzTicTacToe!</h1>
+
+    <!-- Player Info -->
+    <div>
+        <p id="userCont">You: <span id="user"></span></p>
+        <p id="oppNameCont">Opponent: <span id="oppName"></span></p>
+    </div>
+
+    <br>
+
+    <!-- Value and Turn -->
+    <p id="valueCont">You are playing as <span id="value"></span></p>
+    <p id="whosTurn">X's Turn</p>
+
+    <br>
+
+    <!-- Username Input -->
+    <div id="name">
+        <p id="enterName">Enter your Name:</p>
+        <input type="text" placeholder="Name" id="userName" autocomplete="off">
+    </div>
+
+    <button id="find">Search for a player</button>
+    <button id="playBot">Play against bot</button>
+    <img id="loading" src="/loadingSnail.gif" alt="loading" style="width: 80px; display: none;">
+
+    <!-- Game Board -->
+    <div id="bigContainer" style="display: none;">
+        <div id="cont">
+            <button id="btn1" class="btn"></button>
+            <button id="btn2" class="btn"></button>
+            <button id="btn3" class="btn"></button>
+            <button id="btn4" class="btn"></button>
+            <button id="btn5" class="btn"></button>
+            <button id="btn6" class="btn"></button>
+            <button id="btn7" class="btn"></button>
+            <button id="btn8" class="btn"></button>
+            <button id="btn9" class="btn"></button>
+        </div>
+    </div>
+
+    <div id="timers">
+        <p id="gameTimer"></p>
+        <p id="turnTimer"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="blitzscript.js"></script> <!-- Your main game logic -->
+    <script src="blitzbotscript.js"></script>
+</body>
+</html>
