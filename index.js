@@ -1,13 +1,26 @@
-
-
 const express = require("express");
 const app = express();
 const path = require("path");
 const http = require("http");
 const { Server } = require("socket.io");
 
+const cors = require("cors");
+app.use(cors({
+  origin: "https://tictactoegroup8.netlify.app", // your Netlify frontend
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 const server = http.createServer(app);
-const io = new Server(server);
+// const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "https://tictactoegroup8.netlify.app",
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
+
 
 // Serve static files (HTML, CSS, JS)
 app.use(express.static(path.resolve("")));
@@ -225,5 +238,3 @@ app.get("/", (req, res) => {
 server.listen(3000, () => {
     console.log("Server is running on http://localhost:3000");
 });
-
-
