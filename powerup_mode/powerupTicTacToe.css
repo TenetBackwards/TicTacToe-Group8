@@ -137,7 +137,6 @@
   
   .btn:disabled {
     cursor: default;
-    opacity: 0.6;
   }
 
   /* Power-up Buttons Container */

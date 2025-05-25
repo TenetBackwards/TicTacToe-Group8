@@ -63,10 +63,6 @@ window.addEventListener('DOMContentLoaded', () => {
         loading.style.display = "block";
         findBtn.disabled = true;
         cancelSearchBtn.style.display = "inline-block";
-        // socket.emit("find", { userName: userName });
-
-        // loading.style.display = "block";
-        // findBtn.disabled = true;
     });
 
 
@@ -148,64 +144,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }, 1000);
     });
-    // socket.on("find", (e) => {
-    //     const allPlayersArray = e.allPlayers;
-    //     const foundObject = allPlayersArray.find(obj => obj.p1.p1name === userName || obj.p2.p2name === userName);
 
-    //     if (!foundObject) return;
-
-    //     let oppName, value;
-
-    //     if (foundObject.p1.p1name === userName) {
-    //         oppName = foundObject.p2.p2name;
-    //         value = foundObject.p1.p1value;
-    //     } else {
-    //         oppName = foundObject.p1.p1name;
-    //         value = foundObject.p2.p2value;
-    //     }
-
-    //     oppNameDisplay.innerText = oppName;
-    //     valueDisplay.innerText = value;
-
-    //     userCont.style.display = "block";
-    //     oppNameCont.style.display = "block";
-    //     valueCont.style.display = "block";
-    //     loading.style.display = "none";
-    //     userNameInput.style.display = "none";
-    //     findBtn.style.display = "none";
-    //     playBotBtn.style.display = "none";
-    //     enterNameLabel.style.display = "none";
-    //     bigContainer.style.display = "block";
-    //     whosTurn.style.display = "block";
-    //     whosTurn.innerText = "X's Turn";
-    //     document.getElementById("powerUps").style.display = "block";
-
-    //     let gameTime = 600; // 10 minutes
-    //     const timerElement = document.createElement("p");
-    //     timerElement.id = "gameTimer";
-    //     timerElement.innerText = "Game Time Left: 10:00";
-    //     document.body.appendChild(timerElement);
-        
-    //     // Create and append turn timer display
-    //     const turnDisplay = document.createElement("p");
-    //     turnDisplay.id = "turnTimer";
-    //     turnDisplay.innerText = "Turn Time Left: 30s";
-    //     document.body.appendChild(turnDisplay);
-
-    //     const gameTimerInterval = setInterval(() => {
-    //         if (gameTime <= 0) {
-    //             clearInterval(gameTimerInterval);
-    //             whosTurn.innerText = "Time's up! Draw.";
-    //             alert("⏰ Time's up! It's a draw.");
-    //             socket.emit("Game Over!", { userName });
-    //             setTimeout(() => location.reload(), 200);
-    //         } else {
-    //             timerElement.innerText = `Game Time Left: ${Math.floor(gameTime / 60)}:${String(gameTime % 60).padStart(2, '0')}`;
-    //             gameTime--;
-    //         }
-    //     }, 1000);
-    // });
-    
     // On player move
     document.querySelectorAll(".btn").forEach((e) => {
         e.addEventListener("click", function () {

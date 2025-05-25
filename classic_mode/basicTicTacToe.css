@@ -151,7 +151,6 @@ input[type="text"] {
 
 .btn:disabled {
   cursor: default;
-  opacity: 0.6;
 }
 
 #bigContainer {
