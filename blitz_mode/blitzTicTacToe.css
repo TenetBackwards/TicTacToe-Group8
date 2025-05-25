@@ -66,6 +66,23 @@
   #find:hover {
     background: #1e88e5;
   }
+
+  #cancelSearch {
+  background: #42a5f5;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 0.8rem;
+  box-shadow: 3px 3px 7px #90caf9;
+  transition: 0.3s ease;
+}
+
+#cancelSearch:hover {
+  background: #1e88e5;
+}
   
   #playBot {
     background: #42a5f5;
