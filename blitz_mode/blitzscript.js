@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const whosTurn = document.getElementById("whosTurn");
     const findBtn = document.getElementById("find");
     const playBotBtn = document.getElementById("playBot");
+    const homeBtn = document.getElementById("home");
     const userNameInput = document.getElementById("userName");
     
     const cancelSearchBtn = document.getElementById("cancelSearch");
@@ -110,6 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
         userNameInput.style.display = "none";
         findBtn.style.display = "none";
         playBotBtn.style.display = "none";
+        homeBtn.style.display = "none";
         enterNameLabel.style.display = "none";
         bigContainer.style.display = "block";
         whosTurn.style.display = "block";
